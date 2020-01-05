@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>入力ページ</title>
+<!-- css -->
+<link rel="stylesheet" href="./input.css">
+</head>
+
+<body>
+
+<!----------------- [[[[ baseArea ]]]] ----------------->
+<div class="base_area">
+
+<header class="header_area">
+<h1>入力ページタイトル</h1>
+</header><!-- /.header_area -->
+
+<!----------------- [[[ contentArea ]]] ----------------->
+<div class="content_area">
+
+<h2 class="heading2_01">入力ページ</h2>
+
+<!-- ■入力欄 -->
+<article class="article_1">
+<h3 class="heading3_01">テキストを入力して確認ボタンを押してください。</h3>
+
+<form action="confirm.php" method="post" id="inputForm">
+
+<textarea name="message" class="textarea_1" id="txtInclude"></textarea>
+
+<div class="next"><input type="submit" value="確認する" class="decide"></div>
+
+</form>
+
+</article><!-- /.article_1 -->
+
+<!-- ■注記欄 -->
+<article class="article_1">
+<h3 class="heading3_01">入力に関しての注意</h3>
+<ul class="txt_list_1">
+<li>入力のルールなどがあれば記入</li>
+<li>注意事項1</li>
+<li>注意事項2</li>
+</ul>
+</article><!-- /.article_1 -->
+
+</div><!-- /.content_area -->
+<!-------- [[[ contentArea / end ]]] -------->
+
+</div><!-- /.base_area -->
+<!-------- [[[[ baseArea / end ]]]] -------->
+</body>
+
+<!-- japascriptSetting -->
+<script src="../jquery-3.1.1.min.js"></script>
+<script>
+$(function() {
+	$.ajax({
+		url: '../memorize.txt', 
+		cache: false,
+		success: function(txt){
+			var includeTxt = $.parseJSON(txt);
+			$("#txtInclude").append(includeTxt);
+		}
+	});
+});
+</script>
+<!-- japascriptSetting -->
+
+</html>

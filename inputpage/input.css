@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------
+ *  	         base style setting
+ * ----------------------------------------------- */
+
+/* =========== base =========== */
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #000000;
+	background-color:#f0f0f0;
+  word-wrap: break-word;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "メイリオ", "Meiryo", "游ゴシック", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+  line-height: 1.6;
+	opacity:1;
+
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+@media only screen and (max-width: 48em) {
+  body {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+article,
+aside,
+figure,
+figcaption,
+details,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  margin: 0;
+}
+
+ul,
+input {
+  padding: 0;
+}
+
+article,
+aside,
+figure,
+figcaption,
+details,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+th,
+td {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+figure,
+figcaption,
+details,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+img {
+  width: 100%;
+  width: 100%\9;
+  border: none;
+  vertical-align: middle;
+}
+
+svg{width:100%;}
+
+a {
+	color:#000;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration:none;
+	}
+/* =========== pageBase =========== */
+div.base_area {
+  position: relative;
+  margin:0;
+  padding:0;
+  min-width: 320px;
+  width: 100%;
+}
+/* =========== headerArea =========== */
+header.header_area{
+	width:100%;
+	margin:0;
+	padding:15px 10px;
+	background-color:#FFF;
+	}
+header.header_area h1{
+	font-size:16px;
+	font-weight:normal;
+	letter-spacing:1px;
+	}
+/* =========== headerArea =========== */
+
+/* =========== contentArea =========== */
+div.content_area {
+  position: relative;
+	width:100%;
+	margin:0 0 5% 0;
+	padding:30px 0;
+	z-index:1;
+}
+/* 1024px */
+@media only screen and (max-width: 64em) {
+div.content_area {
+}
+}
+/* 480px */
+@media only screen and (max-width: 30em) {
+div.content_area {
+}
+}
+
+/* ====================== compornent setting ====================== */
+p.decided_txt{
+	margin:0 0 30px;
+	padding:8px 12px;
+	box-sizing:border-box;
+	width:100%;
+	font-size:16px;
+	font-weight:nomal;
+	line-height:1.6;
+	}
+p.note_txt{
+	margin:0 0 10px;
+	font-size:12px;
+	font-weight:nomal;
+	line-height:1.6;
+	}
+
+h2.heading2_01{
+	margin:0 0 30px 0;
+	font-size:20px;
+	text-align:center;
+	color:#322e2e;
+	letter-spacing:2px;
+	}
+
+h3.heading3_01{
+	margin:0 0 20px 0;
+	font-size:16px;
+	text-align:center;
+	color:#322e2e;
+	letter-spacing:1.5px;
+	}
+
+article.article_1{
+	margin:0 auto 30px;
+	padding:30px 50px;
+	max-width:560px;
+	background-color:#FFF;
+	box-shadow:0 0 5px 0px #d8d8d8;
+	}
+
+/* form */
+textarea.textarea_1{
+	display:block;
+	margin:0 auto 30px;
+	padding:8px 12px;
+	box-sizing:border-box;
+	width:100%;
+	min-height:120px;
+	font-size:16px;
+	font-family: "Noto Sans Japanese";
+	font-weight:nomal;
+	line-height:1.6;
+	letter-spacing:1.5px;
+	border:solid 1px #d8d8d8;
+	background-color:#ffffff;
+	box-shadow:0 0 5px 0px #d8d8d8 inset;
+	}
+textarea.textarea_1:focus{
+	box-shadow:0 0 10px 0px #d8d8d8;
+	outline:solid 1px #aca7a7;
+	}
+/*submit*/
+input.decide{
+	position:relative;
+	display:block;
+	width:120px;
+	margin:0 auto;
+	padding:10px 0;
+	background-color:#276baa;
+	border:none;
+	color:#FFF;
+	border-radius:3px;
+	font-family: "Noto Sans Japanese";
+	font-size:16px;
+	line-height:1;
+	cursor:pointer;
+	transition:all 0.3s;
+	}
+input.decide::after{
+	position:absolute;
+	right:5px;
+	top:0;
+	bottom:0;
+	margin:auto;
+	content:"\025b6";
+	display:block;
+	}
+input.decide:hover{
+	box-shadow:0 1px 8px 0px #696767;
+	}
+input.decide:focus{
+	outline:none;
+	}
+	
+div.btn_01{
+	position:relative;
+	display:block;
+	width:120px;
+	margin:0 auto;
+	padding:10px 0;
+	box-sizing:border-box;
+	background-color:#276baa;
+	border:none;
+	border-radius:3px;
+	cursor:pointer;
+	text-align:center;
+	line-height:1;
+	transition:all 0.3s;
+	}
+div.btn_01 a{
+	font-family: "Noto Sans Japanese";
+	font-size:16px;
+	color:#FFF;
+	line-height:1;
+	}
+div.btn_01:hover{
+	box-shadow:0 1px 8px 0px #696767;
+	}
+
+/* ボタンリスト */
+ul.btn_list{
+	list-style:none;
+	width:260px;
+	margin:0 auto;
+	}
+ul.btn_list:after {
+  display: block;
+  visibility: hidden; 
+  clear: both;
+  height: 0;
+  content: "";
+}
+ul.btn_list li{
+	float:left;
+	width:120px;
+	margin:0 20px 0 0;
+	}
+ul.btn_list li:last-child{
+	margin:0 0 0 0;
+	}
+
+/* 赤ボタン */
+.btn_red{
+	background-color:#da172e !important;
+	}
+	
+/* next */
+div.next{
+	position:relative;
+	width:120px;
+	margin:0 auto;
+	}
+div.next::after{
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:5px;
+	margin:auto;
+	display:block;
+	content:"\025b6";
+	font-size:12px;
+	height:12px;
+	line-height:1;
+	color:#FFF;
+	z-index:999;
+	}
+
+/* back */
+div.back{
+	position:relative;
+	width:120px;
+	margin:0 auto;
+	}
+div.back::after{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:5px;
+	margin:auto;
+	display:block;
+	content:"\025c0";
+	font-size:12px;
+	height:12px;
+	line-height:1;
+	color:#FFF;
+	z-index:999;
+	}
+
+
+/* テキストリスト */
+ul.txt_list_1{
+	
+	}
+ul.txt_list_1 li{
+	margin:0 0 5px 0;
+	list-style: inside;
+	font-family: "Noto Sans Japanese";
+	font-size:14px;
+	letter-spacing:1.3px;
+	color:#322e2e;
+	}
+
+/* 確認ボックス */
+
+/* 確認用テキストサイズ */
+p.confirm_txt{
+	font-size:14px;
+	line-height:1.5;
+	}
+
+div.confirm_box{
+	border:solid 1px #333333;
+	width:442px;
+	margin:0 auto 10px;
+	box-sizing:border-box;
+	}
+div.confirm_box:after {
+  display: block;
+  visibility: hidden; 
+  clear: both;
+  height: 0;
+  content: "";
+}
+div.confirm_box .confirm_box_txt{
+	padding:10px;
+	box-sizing:border-box;
+	}

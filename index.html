@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<style>
+p{text-align: center;}
+div.samplebox{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border: solid 1px #5f5f5f;
+}
+</style>
+</head>
+
+<body>
+
+<p>下記ボックス内のテキストを変更します。</p>
+
+<div class="samplebox">
+<p id="txtInclude"></p>
+</div>
+
+<p><a href="inputpage/">変更ページはこちら</a></p>
+
+</body>
+
+<!-- +javaScriptSetting+ -->
+<script src="./jquery-3.1.1.min.js"></script>
+<script>
+$(function() {
+	$.ajax({
+		url: 'memorize.txt', 
+		cache: false,
+		success: function(txt){
+			var includeTxt = $.parseJSON(txt);
+			$("#txtInclude").append(includeTxt);
+		}
+	});
+});
+</script>
+<!-- +javaScriptSetting+ -->
+</html>
